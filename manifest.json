@@ -1,0 +1,46 @@
+{
+    "dxt_version": "0.1",
+    "name": "cobol-document-mcp-server",
+    "display_name": "COBOLドキュメントMCPサーバー",
+    "version": "0.1.0",
+    "description": "COBOL言語のドキュメントのMCP Serverです。LLMがCOBOLの最新情報にアクセスして回答できるようになります。",
+    "icon": "assets/icon.png",
+    "author": {
+        "name": "cobol-document-mcp-server",
+        "url": "https://github.com/cobol-document-mcp-server"
+    },
+    "server": {
+        "type": "node",
+        "entry_point": "dist/index.js",
+        "mcp_config": {
+            "command": "node",
+            "args": [
+                "${__dirname}/dist/index.js"
+            ]
+        }
+    },
+    "tools": [
+        {
+            "name": "fetch_general",
+            "description": "COBOLの一般的な情報を返します。"
+        },
+        {
+            "name": "list_documents",
+            "description": "docsディレクトリ内の利用可能なドキュメントファイル名の配列を返します。"
+        },
+        {
+            "name": "search_document",
+            "description": "指定されたドキュメントファイルの内容を取得します。"
+        }
+    ],
+    "keywords": [
+        "cobol",
+        "programming",
+        "document"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cobol-document-mcp-server/cobol-document-mcp-server"
+    }
+}

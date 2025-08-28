@@ -1,0 +1,36 @@
+{
+  "name": "cobol-document-mcp-server",
+  "version": "0.1.0",
+  "description": "COBOL言語のドキュメントを参照するMCPサーバーです。",
+  "license": "MIT",
+  "author": "cobol-document-mcp-server",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "cobol-document-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "playground": "mastra playground"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^2.0.22",
+    "@mastra/core": "^0.15.2",
+    "@mastra/libsql": "^0.13.7",
+    "@mastra/mcp": "^0.11.2",
+    "@mastra/memory": "^0.14.2",
+    "@modelcontextprotocol/sdk": "^1.15.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "@types/node": "^24.0.12",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
